@@ -1,5 +1,3 @@
-const arr = [1, 2, 1, 4, 5, 1, 2, 3];
-
 
 //Write a function that removes duplicate values from an array. 
 function removeDuplicates(arr) {
@@ -16,7 +14,7 @@ function reverseArray(arr) {
 // Write a function that takes an array of names and returns a new array with only names that start with "A", 
 // capitalized.
 function filterNamesStartingWithA(names) { // array 
-	return names.filter(item => item.startsWith('A')) // new array
+	return names.filter(item => item.startsWith('A'))
 		.map(name => name.charAt(0).toUpperCase() + name.slice(1));
 }
 

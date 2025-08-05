@@ -1,0 +1,25 @@
+### After draw the ERD the next step is to map the entities to tables.
+
+![](./slides/map1.png)
+![](./slides/map2.png)
+![](./slides/map3.png)
+![](./slides/map4.png)
+![](./slides/map5.png)
+![](./slides/map6.png)
+![](./slides/map7.png)
+![](./slides/map8.png)
+![](./slides/map9.png)
+![](./slides/map10.png)
+![](./slides/map11.png)
+![](./slides/map12.png)
+![](./slides/map13.png)
+![](./slides/map14.png)
+![](./slides/map15.png)
+![](./slides/map16.png)
+![](./slides/map17.png)
+![](./slides/map18.png)
+![](./slides/map19.png)
+![](./slides/map20.png)
+![](./slides/map21.png)
+
+

@@ -1,6 +1,5 @@
 # ERD (Entity-Relationship Diagram) for the D2 Database Revision
 
-
 # ERD Diagram
 ![](./slides/ERD1.png)
 ![](./slides/ERD2.png)

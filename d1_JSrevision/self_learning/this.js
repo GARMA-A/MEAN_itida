@@ -60,11 +60,23 @@ const obj2 = {
 	}
 };
 
-obj2.regularMethod();
+// obj2.regularMethod();
 // Output: Hello, Bob!
-const unbound = obj2.regularMethod;
-unbound();
+// const unbound = obj2.regularMethod;
+// unbound();
 // Output: Hello, undefined! (in strict mode)
+//
+const you = {
+	name: "HOHOHO",
+	this: console.log(this),
+	arrow: () => {
+		console.log(this);
+		console.log(`Hello, my name is ${this.name}`);
+	}
+}
+
+you.arrow(); // Hello, my name is undefined
+you.this;
 
 
 

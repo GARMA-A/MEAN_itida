@@ -1,4 +1,5 @@
 const fs = require("fs");
+
 var getAllProducts = (req, res) => {
   var products = JSON.parse(fs.readFileSync("products.json", "utf-8"));
   res.json(products);
@@ -23,15 +24,10 @@ var updateProduct = (req, res) => {
   prodcuts[index] = { ...prodcuts[index], ...updateProdct }
   fs.writeFileSync("products.json", JSON.stringify(prodcuts))
   res.status(201).json({ message: "update product ", product: prodcuts[index] })
-
-  ////oldProduct p1
-  //new product
-  ////check p1 id exists
-  ///if exist    oldproduct=newproduct
 };
-
 var deleteProduct = (req, res) => {
   const { name } = req.params;
+
   var products = JSON.parse(fs.readFileSync("products.json", "utf-8"));
   const index = products.findIndex(p => p.name === name);
   if (index === -1) {

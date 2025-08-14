@@ -90,7 +90,6 @@ ${deleteButton(p.name)}</li>`)}
 		let body = "";
 		req.on("data", chunk => {
 
-			console.log(body);
 			body += chunk
 		});
 

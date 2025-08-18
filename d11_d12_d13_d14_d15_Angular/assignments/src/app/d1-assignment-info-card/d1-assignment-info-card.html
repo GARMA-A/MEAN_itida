@@ -1,0 +1,77 @@
+<div class="profile-card">
+  <div class="card-header">
+    <h2>Profile Card - Angular Data Binding Demo</h2>
+  </div>
+
+  <div class="card-content">
+    <!-- 1. Interpolation - Show user's name, email, job title, and current year -->
+    <div class="profile-info">
+      <img [src]="userImageUrl" alt="User Avatar" class="avatar">
+      <div class="user-details">
+        <h3>{{ userName }}</h3>
+        <p class="email">{{ userEmail }}</p>
+        <p class="job-title">{{ jobTitle }}</p>
+        <p class="year">Current Year: {{ currentYear }}</p>
+      </div>
+    </div>
+
+    <!-- 2. Property Binding - Display user image and disable button -->
+    <div class="actions">
+      <button
+        [disabled]="isButtonDisabled"
+        (click)="onButtonClick()"
+        class="action-button"
+        [class.disabled]="isButtonDisabled">
+        {{ isButtonDisabled ? 'Button Disabled' : 'Click Me!' }}
+      </button>
+
+      <!-- 3. Event Binding - Count button clicks -->
+      <p class="click-counter">Button clicked {{ clickCount }} times</p>
+
+      <button (click)="toggleButtonState()" class="toggle-button">
+        {{ isButtonDisabled ? 'Enable Button' : 'Disable Button' }}
+      </button>
+    </div>
+
+    <!-- 4. Two-Way Binding - Edit name and email with live updates -->
+    <div class="edit-section">
+      <h4>Edit Profile (Live Updates)</h4>
+
+      <div class="input-group">
+        <label for="nameInput">Name:</label>
+        <input
+          id="nameInput"
+          type="text"
+          [(ngModel)]="userName"
+          class="edit-input"
+          placeholder="Enter your name">
+      </div>
+
+      <div class="input-group">
+        <label for="emailInput">Email:</label>
+        <input
+          id="emailInput"
+          type="email"
+          [(ngModel)]="userEmail"
+          class="edit-input"
+          placeholder="Enter your email">
+      </div>
+
+      <div class="input-group">
+        <label for="jobInput">Job Title:</label>
+        <input
+          id="jobInput"
+          type="text"
+          [(ngModel)]="jobTitle"
+          class="edit-input"
+          placeholder="Enter your job title">
+      </div>
+    </div>
+
+    <div class="reset-section">
+      <button (click)="resetProfile()" class="reset-button">
+        Reset to Default
+      </button>
+    </div>
+  </div>
+</div>
